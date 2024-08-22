@@ -9,27 +9,44 @@
 /* Begin PBXBuildFile section */
 		3E0BA1B52C7749300001768E /* WebSocketProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0BA1B42C7749300001768E /* WebSocketProvider.swift */; };
 		3E0BA1B82C774C8C0001768E /* Atlantis in Frameworks */ = {isa = PBXBuildFile; productRef = 3E0BA1B72C774C8C0001768E /* Atlantis */; };
+		3E5041A22C77688D0005CB4F /* Binance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5041A12C77688D0005CB4F /* Binance.swift */; };
+		3E5041A52C7778EF0005CB4F /* String++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5041A42C7778EF0005CB4F /* String++.swift */; };
+		3E5041A72C7779000005CB4F /* Decimal++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5041A62C7779000005CB4F /* Decimal++.swift */; };
+		3E5041AA2C777A6B0005CB4F /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 3E5041A92C777A6B0005CB4F /* Then */; };
+		3E5041AD2C777A8A0005CB4F /* Formatted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5041AC2C777A8A0005CB4F /* Formatted.swift */; };
+		3E5041AF2C777ACB0005CB4F /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5041AE2C777ACB0005CB4F /* Constant.swift */; };
+		3E5041B22C7782470005CB4F /* JSONDecoder++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5041B12C7782470005CB4F /* JSONDecoder++.swift */; };
+		3E5041B42C7782D70005CB4F /* TickerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5041B32C7782D70005CB4F /* TickerVM.swift */; };
+		3E5041B62C7783FA0005CB4F /* CGFloat++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5041B52C7783FA0005CB4F /* CGFloat++.swift */; };
+		3E5041B82C7785AE0005CB4F /* ConfigurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5041B72C7785AE0005CB4F /* ConfigurationView.swift */; };
 		3EBADBE42C77380D00A085C0 /* BinanceBarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBADBE32C77380D00A085C0 /* BinanceBarApp.swift */; };
-		3EBADBE62C77380D00A085C0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBADBE52C77380D00A085C0 /* ContentView.swift */; };
 		3EBADBE82C77380E00A085C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EBADBE72C77380E00A085C0 /* Assets.xcassets */; };
 		3EBADBEB2C77380E00A085C0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EBADBEA2C77380E00A085C0 /* Preview Assets.xcassets */; };
 		3EBADBF42C77398000A085C0 /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 3EBADBF32C77398000A085C0 /* SwiftUIX */; };
 		3EBADBF72C7739A800A085C0 /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = 3EBADBF62C7739A800A085C0 /* Factory */; };
 		3EBADBFA2C7739B800A085C0 /* SwifterSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3EBADBF92C7739B800A085C0 /* SwifterSwift */; };
 		3EBADBFD2C7739DE00A085C0 /* CombineExt in Frameworks */ = {isa = PBXBuildFile; productRef = 3EBADBFC2C7739DE00A085C0 /* CombineExt */; };
-		3EBADBFF2C773B9A00A085C0 /* AppMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBADBFE2C773B9A00A085C0 /* AppMenu.swift */; };
+		3EBADBFF2C773B9A00A085C0 /* AllTickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBADBFE2C773B9A00A085C0 /* AllTickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3E0BA1B42C7749300001768E /* WebSocketProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketProvider.swift; sourceTree = "<group>"; };
 		3E0BA1B92C774DEC0001768E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		3E5041A12C77688D0005CB4F /* Binance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Binance.swift; sourceTree = "<group>"; };
+		3E5041A42C7778EF0005CB4F /* String++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String++.swift"; sourceTree = "<group>"; };
+		3E5041A62C7779000005CB4F /* Decimal++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal++.swift"; sourceTree = "<group>"; };
+		3E5041AC2C777A8A0005CB4F /* Formatted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatted.swift; sourceTree = "<group>"; };
+		3E5041AE2C777ACB0005CB4F /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		3E5041B12C7782470005CB4F /* JSONDecoder++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder++.swift"; sourceTree = "<group>"; };
+		3E5041B32C7782D70005CB4F /* TickerVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerVM.swift; sourceTree = "<group>"; };
+		3E5041B52C7783FA0005CB4F /* CGFloat++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat++.swift"; sourceTree = "<group>"; };
+		3E5041B72C7785AE0005CB4F /* ConfigurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationView.swift; sourceTree = "<group>"; };
 		3EBADBE02C77380D00A085C0 /* BinanceBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BinanceBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EBADBE32C77380D00A085C0 /* BinanceBarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinanceBarApp.swift; sourceTree = "<group>"; };
-		3EBADBE52C77380D00A085C0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3EBADBE72C77380E00A085C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3EBADBEA2C77380E00A085C0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3EBADBEC2C77380E00A085C0 /* BinanceBar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BinanceBar.entitlements; sourceTree = "<group>"; };
-		3EBADBFE2C773B9A00A085C0 /* AppMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMenu.swift; sourceTree = "<group>"; };
+		3EBADBFE2C773B9A00A085C0 /* AllTickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +55,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EBADBFD2C7739DE00A085C0 /* CombineExt in Frameworks */,
+				3E5041AA2C777A6B0005CB4F /* Then in Frameworks */,
 				3EBADBFA2C7739B800A085C0 /* SwifterSwift in Frameworks */,
 				3E0BA1B82C774C8C0001768E /* Atlantis in Frameworks */,
 				3EBADBF42C77398000A085C0 /* SwiftUIX in Frameworks */,
@@ -48,19 +66,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3E0BA1B22C773EF20001768E /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		3E0BA1B32C773EFA0001768E /* Providers */ = {
 			isa = PBXGroup;
 			children = (
 				3E0BA1B42C7749300001768E /* WebSocketProvider.swift */,
 			);
 			path = Providers;
+			sourceTree = "<group>";
+		};
+		3E378B3B2C775C2500E1A1AE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3E5041A12C77688D0005CB4F /* Binance.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3E378B3E2C7763C400E1A1AE /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				3E5041B32C7782D70005CB4F /* TickerVM.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		3E5041A32C7778E40005CB4F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3E5041A42C7778EF0005CB4F /* String++.swift */,
+				3E5041A62C7779000005CB4F /* Decimal++.swift */,
+				3E5041B12C7782470005CB4F /* JSONDecoder++.swift */,
+				3E5041B52C7783FA0005CB4F /* CGFloat++.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3E5041AB2C777A770005CB4F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3E5041AC2C777A8A0005CB4F /* Formatted.swift */,
+				3E5041AE2C777ACB0005CB4F /* Constant.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		3E5041B02C777C770005CB4F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3EBADBFE2C773B9A00A085C0 /* AllTickerView.swift */,
+				3E5041B72C7785AE0005CB4F /* ConfigurationView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		3EBADBD72C77380D00A085C0 = {
@@ -82,15 +138,17 @@
 		3EBADBE22C77380D00A085C0 /* BinanceBar */ = {
 			isa = PBXGroup;
 			children = (
-				3E0BA1B92C774DEC0001768E /* Info.plist */,
+				3E5041B02C777C770005CB4F /* Views */,
+				3E5041AB2C777A770005CB4F /* Utils */,
+				3E5041A32C7778E40005CB4F /* Extensions */,
+				3E378B3E2C7763C400E1A1AE /* ViewModels */,
+				3E378B3B2C775C2500E1A1AE /* Models */,
 				3E0BA1B32C773EFA0001768E /* Providers */,
-				3E0BA1B22C773EF20001768E /* Models */,
-				3EBADBE32C77380D00A085C0 /* BinanceBarApp.swift */,
-				3EBADBFE2C773B9A00A085C0 /* AppMenu.swift */,
-				3EBADBE52C77380D00A085C0 /* ContentView.swift */,
-				3EBADBE72C77380E00A085C0 /* Assets.xcassets */,
-				3EBADBEC2C77380E00A085C0 /* BinanceBar.entitlements */,
 				3EBADBE92C77380E00A085C0 /* Preview Content */,
+				3EBADBE72C77380E00A085C0 /* Assets.xcassets */,
+				3EBADBE32C77380D00A085C0 /* BinanceBarApp.swift */,
+				3E0BA1B92C774DEC0001768E /* Info.plist */,
+				3EBADBEC2C77380E00A085C0 /* BinanceBar.entitlements */,
 			);
 			path = BinanceBar;
 			sourceTree = "<group>";
@@ -125,6 +183,7 @@
 				3EBADBF92C7739B800A085C0 /* SwifterSwift */,
 				3EBADBFC2C7739DE00A085C0 /* CombineExt */,
 				3E0BA1B72C774C8C0001768E /* Atlantis */,
+				3E5041A92C777A6B0005CB4F /* Then */,
 			);
 			productName = BinanceBar;
 			productReference = 3EBADBE02C77380D00A085C0 /* BinanceBar.app */;
@@ -160,6 +219,7 @@
 				3EBADBF82C7739B800A085C0 /* XCRemoteSwiftPackageReference "SwifterSwift" */,
 				3EBADBFB2C7739DE00A085C0 /* XCRemoteSwiftPackageReference "CombineExt" */,
 				3E0BA1B62C774C8C0001768E /* XCRemoteSwiftPackageReference "atlantis" */,
+				3E5041A82C777A6B0005CB4F /* XCRemoteSwiftPackageReference "Then" */,
 			);
 			productRefGroup = 3EBADBE12C77380D00A085C0 /* Products */;
 			projectDirPath = "";
@@ -187,9 +247,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E5041AD2C777A8A0005CB4F /* Formatted.swift in Sources */,
+				3E5041B82C7785AE0005CB4F /* ConfigurationView.swift in Sources */,
+				3E5041A52C7778EF0005CB4F /* String++.swift in Sources */,
+				3E5041B62C7783FA0005CB4F /* CGFloat++.swift in Sources */,
+				3E5041AF2C777ACB0005CB4F /* Constant.swift in Sources */,
+				3E5041B22C7782470005CB4F /* JSONDecoder++.swift in Sources */,
+				3E5041B42C7782D70005CB4F /* TickerVM.swift in Sources */,
+				3E5041A72C7779000005CB4F /* Decimal++.swift in Sources */,
 				3E0BA1B52C7749300001768E /* WebSocketProvider.swift in Sources */,
-				3EBADBFF2C773B9A00A085C0 /* AppMenu.swift in Sources */,
-				3EBADBE62C77380D00A085C0 /* ContentView.swift in Sources */,
+				3E5041A22C77688D0005CB4F /* Binance.swift in Sources */,
+				3EBADBFF2C773B9A00A085C0 /* AllTickerView.swift in Sources */,
 				3EBADBE42C77380D00A085C0 /* BinanceBarApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,13 +398,14 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BinanceBar/Info.plist;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Atlantis 将使用 Bonjour 服务从您的本地网络发现 Proxyman 应用程序。";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = BinanceBar.ygsgdbd.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -360,13 +429,14 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BinanceBar/Info.plist;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Atlantis 将使用 Bonjour 服务从您的本地网络发现 Proxyman 应用程序。";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = BinanceBar.ygsgdbd.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -405,6 +475,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.24.0;
+			};
+		};
+		3E5041A82C777A6B0005CB4F /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
 			};
 		};
 		3EBADBF22C77398000A085C0 /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
@@ -446,6 +524,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3E0BA1B62C774C8C0001768E /* XCRemoteSwiftPackageReference "atlantis" */;
 			productName = Atlantis;
+		};
+		3E5041A92C777A6B0005CB4F /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3E5041A82C777A6B0005CB4F /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
 		};
 		3EBADBF32C77398000A085C0 /* SwiftUIX */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -5,15 +5,23 @@
 //  Created by Rainbow on 2024/8/22.
 //
 
+#if DEBUG
 import Atlantis
+#endif
+
 import Factory
+import SwifterSwift
 import SwiftUI
 import SwiftUIX
 
-struct Subscription: Codable {
-    let method: String
+struct Subscription: Codable, Identifiable {
+    var id = UUID()
+    var method: String = "SUBSCRIBE"
     let params: [String]
-    let id: UInt
+
+    init(params: [String]) {
+        self.params = params
+    }
 }
 
 @main
@@ -21,34 +29,46 @@ struct BinanceBarApp: App {
     @Injected(\.webSocketProvider) var webSocketProvider
 
     init() {
-        Atlantis.start(hostName: "guans-mac-mini.local.")
+        #if DEBUG
+        Atlantis.start()
+        #endif
+
         webSocketProvider.connect()
+        subscription()
+    }
+
+    func subscription() {
+        guard webSocketProvider.allTicker24H.isEmpty else { return }
+
+        webSocketProvider.sendStruct(Subscription(
+            params: [
+                "btcusdt@ticker",
+                "ethusdt@ticker",
+                "bnbusdt@ticker",
+                "dogeusdt@ticker",
+                "trxusdt@ticker",
+                "eosusdt@ticker",
+                "ltcusdt@ticker",
+                "linkusdt@ticker",
+            ]
+        ))
     }
 
     var body: some Scene {
         MenuBarExtra("Binance") {
-            AppMenu()
-
-            Button {
-                let msg = Subscription(
-                    method: "SUBSCRIBE",
-                    params: ["btcusdt@aggTrade", "btcusdt@depth"],
-                    id: 1
-                )
-                if let data = try? JSONEncoder().encode(msg),
-                   let jsonStr = data.string(encoding: .utf8)
-                {
-                    webSocketProvider.sendMsg(jsonStr)
+            ScrollView {
+                LazyVStack(spacing: 12) {
+                    AllTickerView()
+                    Divider()
+                    ConfigurationView()
                 }
-            } label: {
-                Text("Send Message")
+            }
+            .fixedSize(horizontal: false, vertical: true)
+            .padding(.all, 12)
+            .onAppear {
+                subscription()
             }
         }
         .menuBarExtraStyle(.window)
-
-        WindowGroup {
-            ContentView()
-                .onAppear {}
-        }
     }
 }
