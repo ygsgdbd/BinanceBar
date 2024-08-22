@@ -28,6 +28,7 @@ class WebSocketProvider {
             case .failure:
                 break
             }
+            didReceiveMessage()
         }
     }
 }
@@ -37,6 +38,8 @@ extension WebSocketProvider {
         guard let url = "wss://stream.binance.com:9443/ws".url else { return }
         task = URLSession.shared.webSocketTask(with: url)
         task?.resume()
+        
+        didReceiveMessage()
     }
 
     func sendMsg(_ msg: String) {
@@ -51,6 +54,6 @@ extension Container {
         self {
             WebSocketProvider()
         }
-        .shared
+        .singleton
     }
 }
