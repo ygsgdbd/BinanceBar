@@ -10,47 +10,42 @@ import Atlantis
 #endif
 
 import Factory
+import KeyboardShortcuts
 import SwifterSwift
 import SwiftUI
 import SwiftUIX
 
-struct Subscription: Codable, Identifiable {
-    var id = UUID()
-    var method: String = "SUBSCRIBE"
-    let params: [String]
-
-    init(params: [String]) {
-        self.params = params
-    }
-}
-
 @main
 struct BinanceBarApp: App {
-    @Injected(\.webSocketProvider) var webSocketProvider
+    @Injected(\.wsService) var wsService
+    @State var appState = Container.shared.appState.resolve()
+    @UserStorage("x-all-pair") var allPair: [LocalPair] = []
+
+    let subscriptionId = UUID().uuidString
 
     init() {
         #if DEBUG
         Atlantis.start()
         #endif
 
-        webSocketProvider.connect()
+        wsService.connect()
         subscription()
     }
 
     func subscription() {
-        guard webSocketProvider.allTicker24H.isEmpty else { return }
+        let tickers = allPair.filter(\.enabled).map { "\($0.symbol)usdt@ticker".lowercased() }
+        if tickers.isEmpty { return }
 
-        webSocketProvider.sendStruct(Subscription(
-            params: [
-                "btcusdt@ticker",
-                "ethusdt@ticker",
-                "bnbusdt@ticker",
-                "dogeusdt@ticker",
-                "trxusdt@ticker",
-                "eosusdt@ticker",
-                "ltcusdt@ticker",
-                "linkusdt@ticker",
-            ]
+        wsService.sendJSON(Subscription(
+            id: subscriptionId,
+            method: "UNSUBSCRIBE",
+            params: tickers
+        ))
+
+        wsService.sendJSON(Subscription(
+            id: subscriptionId,
+            method: "SUBSCRIBE",
+            params: tickers
         ))
     }
 
@@ -70,5 +65,12 @@ struct BinanceBarApp: App {
             }
         }
         .menuBarExtraStyle(.window)
+        .onChange(of: allPair) { oldValue, newValue in
+            subscription()
+        }
+
+        Window("Setting", id: "Setting") {
+            TickerManageView()
+        }
     }
 }

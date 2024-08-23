@@ -26,6 +26,8 @@ func formattedPercent(_ n: Decimal?) -> String {
             $0.numberStyle = .percent
             $0.maximumFractionDigits = 2
             $0.minimumFractionDigits = 2
+            $0.positivePrefix = "+"
+            $0.negativePrefix = "-"
         }.string(from: n.nsNumber) ?? kNumberPlaceholder
     } else {
         return kNumberPlaceholder

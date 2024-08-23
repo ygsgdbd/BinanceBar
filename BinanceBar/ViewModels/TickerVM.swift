@@ -12,7 +12,7 @@ import Foundation
 @Observable
 class TickerVM {
     @ObservationIgnored
-    @Injected(\.webSocketProvider) var webSocketProvider
+    @Injected(\.wsService) var wsService
 
     init() {}
 }

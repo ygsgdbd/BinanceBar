@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3E0BA1B52C7749300001768E /* WebSocketProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0BA1B42C7749300001768E /* WebSocketProvider.swift */; };
+		3E0BA1B52C7749300001768E /* WSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0BA1B42C7749300001768E /* WSService.swift */; };
 		3E0BA1B82C774C8C0001768E /* Atlantis in Frameworks */ = {isa = PBXBuildFile; productRef = 3E0BA1B72C774C8C0001768E /* Atlantis */; };
 		3E5041A22C77688D0005CB4F /* Binance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5041A12C77688D0005CB4F /* Binance.swift */; };
 		3E5041A52C7778EF0005CB4F /* String++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5041A42C7778EF0005CB4F /* String++.swift */; };
@@ -19,6 +19,10 @@
 		3E5041B42C7782D70005CB4F /* TickerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5041B32C7782D70005CB4F /* TickerVM.swift */; };
 		3E5041B62C7783FA0005CB4F /* CGFloat++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5041B52C7783FA0005CB4F /* CGFloat++.swift */; };
 		3E5041B82C7785AE0005CB4F /* ConfigurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5041B72C7785AE0005CB4F /* ConfigurationView.swift */; };
+		3EB287BD2C783BDC00C6B904 /* KeyboardShortcuts in Frameworks */ = {isa = PBXBuildFile; productRef = 3EB287BC2C783BDC00C6B904 /* KeyboardShortcuts */; };
+		3EB287C12C78664100C6B904 /* TickerManageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB287C02C78664100C6B904 /* TickerManageView.swift */; };
+		3EB287C32C78669D00C6B904 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB287C22C78669D00C6B904 /* AppState.swift */; };
+		3EB287C52C78691A00C6B904 /* Container++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB287C42C78691A00C6B904 /* Container++.swift */; };
 		3EBADBE42C77380D00A085C0 /* BinanceBarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBADBE32C77380D00A085C0 /* BinanceBarApp.swift */; };
 		3EBADBE82C77380E00A085C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EBADBE72C77380E00A085C0 /* Assets.xcassets */; };
 		3EBADBEB2C77380E00A085C0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EBADBEA2C77380E00A085C0 /* Preview Assets.xcassets */; };
@@ -30,7 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3E0BA1B42C7749300001768E /* WebSocketProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketProvider.swift; sourceTree = "<group>"; };
+		3E0BA1B42C7749300001768E /* WSService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSService.swift; sourceTree = "<group>"; };
 		3E0BA1B92C774DEC0001768E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		3E5041A12C77688D0005CB4F /* Binance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Binance.swift; sourceTree = "<group>"; };
 		3E5041A42C7778EF0005CB4F /* String++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String++.swift"; sourceTree = "<group>"; };
@@ -41,6 +45,9 @@
 		3E5041B32C7782D70005CB4F /* TickerVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerVM.swift; sourceTree = "<group>"; };
 		3E5041B52C7783FA0005CB4F /* CGFloat++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat++.swift"; sourceTree = "<group>"; };
 		3E5041B72C7785AE0005CB4F /* ConfigurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationView.swift; sourceTree = "<group>"; };
+		3EB287C02C78664100C6B904 /* TickerManageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerManageView.swift; sourceTree = "<group>"; };
+		3EB287C22C78669D00C6B904 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		3EB287C42C78691A00C6B904 /* Container++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Container++.swift"; sourceTree = "<group>"; };
 		3EBADBE02C77380D00A085C0 /* BinanceBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BinanceBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EBADBE32C77380D00A085C0 /* BinanceBarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinanceBarApp.swift; sourceTree = "<group>"; };
 		3EBADBE72C77380E00A085C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -55,6 +62,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EBADBFD2C7739DE00A085C0 /* CombineExt in Frameworks */,
+				3EB287BD2C783BDC00C6B904 /* KeyboardShortcuts in Frameworks */,
 				3E5041AA2C777A6B0005CB4F /* Then in Frameworks */,
 				3EBADBFA2C7739B800A085C0 /* SwifterSwift in Frameworks */,
 				3E0BA1B82C774C8C0001768E /* Atlantis in Frameworks */,
@@ -69,7 +77,8 @@
 		3E0BA1B32C773EFA0001768E /* Providers */ = {
 			isa = PBXGroup;
 			children = (
-				3E0BA1B42C7749300001768E /* WebSocketProvider.swift */,
+				3E0BA1B42C7749300001768E /* WSService.swift */,
+				3EB287C22C78669D00C6B904 /* AppState.swift */,
 			);
 			path = Providers;
 			sourceTree = "<group>";
@@ -97,6 +106,7 @@
 				3E5041A62C7779000005CB4F /* Decimal++.swift */,
 				3E5041B12C7782470005CB4F /* JSONDecoder++.swift */,
 				3E5041B52C7783FA0005CB4F /* CGFloat++.swift */,
+				3EB287C42C78691A00C6B904 /* Container++.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -115,6 +125,7 @@
 			children = (
 				3EBADBFE2C773B9A00A085C0 /* AllTickerView.swift */,
 				3E5041B72C7785AE0005CB4F /* ConfigurationView.swift */,
+				3EB287C02C78664100C6B904 /* TickerManageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -184,6 +195,7 @@
 				3EBADBFC2C7739DE00A085C0 /* CombineExt */,
 				3E0BA1B72C774C8C0001768E /* Atlantis */,
 				3E5041A92C777A6B0005CB4F /* Then */,
+				3EB287BC2C783BDC00C6B904 /* KeyboardShortcuts */,
 			);
 			productName = BinanceBar;
 			productReference = 3EBADBE02C77380D00A085C0 /* BinanceBar.app */;
@@ -220,6 +232,7 @@
 				3EBADBFB2C7739DE00A085C0 /* XCRemoteSwiftPackageReference "CombineExt" */,
 				3E0BA1B62C774C8C0001768E /* XCRemoteSwiftPackageReference "atlantis" */,
 				3E5041A82C777A6B0005CB4F /* XCRemoteSwiftPackageReference "Then" */,
+				3EB287BB2C783BDC00C6B904 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */,
 			);
 			productRefGroup = 3EBADBE12C77380D00A085C0 /* Products */;
 			projectDirPath = "";
@@ -247,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EB287C52C78691A00C6B904 /* Container++.swift in Sources */,
 				3E5041AD2C777A8A0005CB4F /* Formatted.swift in Sources */,
 				3E5041B82C7785AE0005CB4F /* ConfigurationView.swift in Sources */,
 				3E5041A52C7778EF0005CB4F /* String++.swift in Sources */,
@@ -255,9 +269,11 @@
 				3E5041B22C7782470005CB4F /* JSONDecoder++.swift in Sources */,
 				3E5041B42C7782D70005CB4F /* TickerVM.swift in Sources */,
 				3E5041A72C7779000005CB4F /* Decimal++.swift in Sources */,
-				3E0BA1B52C7749300001768E /* WebSocketProvider.swift in Sources */,
+				3E0BA1B52C7749300001768E /* WSService.swift in Sources */,
+				3EB287C32C78669D00C6B904 /* AppState.swift in Sources */,
 				3E5041A22C77688D0005CB4F /* Binance.swift in Sources */,
 				3EBADBFF2C773B9A00A085C0 /* AllTickerView.swift in Sources */,
+				3EB287C12C78664100C6B904 /* TickerManageView.swift in Sources */,
 				3EBADBE42C77380D00A085C0 /* BinanceBarApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,7 +405,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = BinanceBar/BinanceBar.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -420,7 +436,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = BinanceBar/BinanceBar.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -485,6 +501,14 @@
 				minimumVersion = 3.0.0;
 			};
 		};
+		3EB287BB2C783BDC00C6B904 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/KeyboardShortcuts";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.1;
+			};
+		};
 		3EBADBF22C77398000A085C0 /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftUIX/SwiftUIX.git";
@@ -529,6 +553,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3E5041A82C777A6B0005CB4F /* XCRemoteSwiftPackageReference "Then" */;
 			productName = Then;
+		};
+		3EB287BC2C783BDC00C6B904 /* KeyboardShortcuts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3EB287BB2C783BDC00C6B904 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */;
+			productName = KeyboardShortcuts;
 		};
 		3EBADBF32C77398000A085C0 /* SwiftUIX */ = {
 			isa = XCSwiftPackageProductDependency;

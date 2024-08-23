@@ -33,7 +33,7 @@ import SwiftUI
 //  "L": 18150,         // 24小时内最后一笔成交交易ID
 //  "n": 18151          // 24小时内成交数
 // }
-struct Ticker24H: Codable {
+struct Ticker24H: Codable, Equatable, Hashable {
     let e: String
     let E: TimeInterval
     let s: String
@@ -70,5 +70,22 @@ extension Ticker24H {
         if P.decimalOr0 > 0 { return Image(systemName: .arrowUp) }
         if P.decimalOr0 < 0 { return Image(systemName: .arrowDown) }
         return nil
+    }
+}
+
+struct Subscription: Codable, Identifiable {
+    var id: String
+    var method: String
+    var params: [String]
+}
+
+struct LocalPair: Identifiable, Equatable, Hashable, Codable {
+    var id = UUID()
+    var symbol: String
+    var enabled: Bool
+    
+    init(symbol: String, enabled: Bool) {
+        self.symbol = symbol
+        self.enabled = enabled
     }
 }

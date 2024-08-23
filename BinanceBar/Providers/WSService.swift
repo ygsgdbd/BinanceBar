@@ -10,24 +10,24 @@ import CombineExt
 import Factory
 import Foundation
 import SwifterSwift
+import SwiftUIX
 
 @Observable
-class WebSocketProvider {
+class WSService {
     var allTicker24H: [Ticker24H] = []
-    var btcTicker: Ticker24H?
 
     @ObservationIgnored
-    private var task: URLSessionWebSocketTask?
+    private var task: URLSessionWebSocketTask? = nil
 }
 
-extension WebSocketProvider {
+extension WSService {
     private func didReceiveMessage() {
         task?.receive { [self] result in
             switch result {
             case .success(let msg):
                 switch msg {
                 case .string(let str):
-                    shunting(str)
+                    _shunting(str)
                 default:
                     break
                 }
@@ -38,28 +38,31 @@ extension WebSocketProvider {
         }
     }
 
-    private func shunting(_ msg: String) {
+    private func _shunting(_ msg: String) {
         guard let data = msg.data(using: .utf8) else { return }
         guard let trade = try? JSONDecoder.shared.decode(Ticker24H.self, from: data) else { return }
 
+        var oldValue = allTicker24H
+        oldValue.prepend(trade)
+        oldValue.removeDuplicates(keyPath: \.s)
+
         DispatchQueue.main.async { [self] in
-            var oldValue = allTicker24H
-            oldValue.prepend(trade)
-            oldValue.removeDuplicates(keyPath: \.s)
             allTicker24H = oldValue.sorted(by: \.s)
         }
     }
 
     func connect() {
-        if let task { return }
-        guard let url = "wss://stream.binance.com:9443/ws".url else { return }
+        guard
+            let url = "wss://stream.binance.com:9443/ws".url
+        else { return }
+
         task = URLSession.shared.webSocketTask(with: url)
         task?.resume()
 
         didReceiveMessage()
     }
 
-    func sendStruct(_ data: Encodable) {
+    func sendJSON(_ data: Encodable) {
         guard let data = try? JSONEncoder().encode(data) else { return }
         guard let json = data.string(encoding: .utf8) else { return }
         sendMsg(json)
@@ -73,11 +76,11 @@ extension WebSocketProvider {
 }
 
 extension Container {
-    var webSocketProvider: Factory<WebSocketProvider> {
+    var wsService: Factory<WSService> {
         self {
-            WebSocketProvider()
+            WSService()
         }
-        .singleton
+        .shared
         .decorator { instance in
             instance.connect()
         }

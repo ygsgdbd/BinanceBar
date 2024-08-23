@@ -11,7 +11,9 @@ import SwiftUI
 import SwiftUIX
 
 struct AllTickerView: View {
-    @Injected(\.webSocketProvider) private var webSocketProvider
+    @Injected(\.wsService) private var wsService
+    @State var filterTicker: [Ticker24H] = []
+    @UserStorage("x-all-pair") var allPair: [LocalPair] = []
 
     var body: some View {
         LazyVGrid(
@@ -23,7 +25,7 @@ struct AllTickerView: View {
             spacing: 12
         ) {
             Group {
-                Text("币种 (\(webSocketProvider.allTicker24H.count))")
+                Text("币种 (\(wsService.allTicker24H.count))")
                 Text("最新价")
                 Text("24H 涨跌")
             }
@@ -31,9 +33,9 @@ struct AllTickerView: View {
             .foregroundStyle(.secondary)
             .padding(.bottom, 4)
 
-            ForEach(enumerating: webSocketProvider.allTicker24H) { _, trade in
+            ForEach(enumerating: wsService.allTicker24H) { _, trade in
                 Group {
-                    Text(trade.s.uppercased().removingSuffix("USDT"))
+                    Text(trade.s.uppercased())
                     Text(formattedNumber(trade.c.decimal))
                         .foregroundColor(trade.xColor)
                     Group {
@@ -48,10 +50,6 @@ struct AllTickerView: View {
                 }
             }
         }
+        .monospacedDigit()
     }
-}
-
-#Preview {
-    AllTickerView()
-        .width(200)
 }
